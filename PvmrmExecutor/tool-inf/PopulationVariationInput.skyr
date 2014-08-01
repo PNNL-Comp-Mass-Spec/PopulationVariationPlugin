@@ -1,0 +1,11 @@
+<?xml version="1.0"?>
+<ReportSpecList>
+  <revision index="1" />
+  <report name="Population Variation Input">
+    <table name="T1">DbPeptide</table>
+    <select>
+      <column name="T1">Protein.Name</column>
+      <column name="T1">Sequence</column>
+    </select>
+  </report>
+</ReportSpecList>
