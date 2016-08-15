@@ -136,7 +136,8 @@
     <Resource Include="PopulationVariation.ico" />
   </ItemGroup>
   <PropertyGroup>
-    <PreBuildEvent>SubWCRev.exe ..\..\..\ ..\..\Properties\AssemblyInfoTemplate.cs ..\..\Properties\AssemblyInfo.cs</PreBuildEvent>
+    <PreBuildEvent>
+    </PreBuildEvent>
   </PropertyGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

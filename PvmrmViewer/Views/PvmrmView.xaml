@@ -20,17 +20,43 @@
 			</MenuItem>
 			<MenuItem Header="_About" Click="AboutClick"/>
 		</Menu>
-			<DataGrid Width="Auto" Height="Auto" ItemsSource="{Binding Entries}" VerticalScrollBarVisibility="Auto" HorizontalScrollBarVisibility="Auto" AutoGenerateColumns="False" DockPanel.Dock="Top">
-				<DataGrid.Columns>
-					<DataGridTextColumn Binding="{Binding Path=ProteinAccession}" Header="Protein Accession" Width="Auto"/>
-					<DataGridTextColumn Binding="{Binding Path=ProteinName}" Header="Protein Name" Width="Auto"/>
-					<DataGridTextColumn Binding="{Binding Path=VariantCodex}" Header="Variant Codex" Width="Auto"/>
-					<DataGridTextColumn Binding="{Binding Path=MinorAlleleFrequency}" Header="Minor Allele Frequency" Width="Auto"/>
-					<DataGridTextColumn Binding="{Binding Path=ReferencePeptide}" Header="Reference Peptide" Width="Auto"/>
-					<DataGridTextColumn Binding="{Binding Path=ModifiedPeptide}" Header="Modified Peptide" Width="Auto"/>
-					<DataGridTextColumn Binding="{Binding Path=SnpId}" Header="SNP ID" Width="Auto"/>
-				</DataGrid.Columns>
-			</DataGrid>
+            <DataGrid Width="Auto" Height="Auto" ItemsSource="{Binding Entries}"
+                      VerticalScrollBarVisibility="Auto" HorizontalScrollBarVisibility="Auto" AutoGenerateColumns="False" DockPanel.Dock="Top">
+                <DataGrid.Columns>
+                    <DataGridTextColumn Binding="{Binding Path=ProteinAccession}"
+                                        IsReadOnly="True" Header="Protein Accession" Width="Auto"/>
+                    <DataGridTextColumn Binding="{Binding Path=ProteinName}"
+                                        IsReadOnly="True" Header="Protein Name" Width="Auto"/>
+                    <DataGridTextColumn Binding="{Binding Path=VariantCodex}"
+                                        IsReadOnly="True" Header="Variant" Width="Auto"/>
+                    <DataGridTextColumn Binding="{Binding Path=MinorAlleleFrequency}"
+                                        IsReadOnly="True" Header="MAF" Width="Auto"/>
+                    <DataGridTextColumn Binding="{Binding Path=Variance}"
+                                        IsReadOnly="True" Header="Variance" Width="Auto"/>
+                    <DataGridTextColumn Binding="{Binding Path=ReferencePeptide}"
+                                        IsReadOnly="True" Header="Reference Peptide" Width="Auto"/>
+                    <DataGridTextColumn Binding="{Binding Path=ModifiedPeptide}"
+                                        IsReadOnly="True" Header="Modified Peptide" Width="Auto"/>
+                    <DataGridTextColumn Binding="{Binding Path=EASmaf}"
+                                        IsReadOnly="True" Header="East Asian" Width="Auto"/>
+                    <DataGridTextColumn Binding="{Binding Path=EURmaf}"
+                                        IsReadOnly="True" Header="European" Width="Auto"/>
+                    <DataGridTextColumn Binding="{Binding Path=AFRmaf}"
+                                        IsReadOnly="True" Header="African" Width="Auto"/>
+                    <DataGridTextColumn Binding="{Binding Path=AMRmaf}"
+                                        IsReadOnly="True" Header="American" Width="Auto"/>
+                    <DataGridTextColumn Binding="{Binding Path=SASmaf}"
+                                        IsReadOnly="True" Header="South Asian" Width="Auto"/>
+                    <DataGridHyperlinkColumn Binding="{Binding Path=SnpUri}" ContentBinding="{Binding Path=SnpId}"
+                                             IsReadOnly="True" Header="SNP ID" Width="Auto">
+                        <DataGridHyperlinkColumn.ElementStyle>
+                            <Style TargetType="TextBlock">
+                                <EventSetter Event="Hyperlink.Click" Handler="OnHyperlinkClick" />
+                            </Style>
+                        </DataGridHyperlinkColumn.ElementStyle>
+                    </DataGridHyperlinkColumn>
+                </DataGrid.Columns>
+            </DataGrid>
 		</DockPanel>
 	</Grid>
 </Window>

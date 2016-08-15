@@ -74,23 +74,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="xCmdLineOptions.cs" />
-    <Compile Include="UtQueryDbSNPLite.cs" />
-    <Compile Include="QueryDbSNPLite.cs" />
-    <Compile Include="Fasta.cs" />
-    <Compile Include="xHardCodedVars.cs" />
+    <Compile Include="SNPDatabase.cs" />
     <Compile Include="Peptide.cs" />
     <Compile Include="Protein.cs" />
     <Compile Include="Snp.cs" />
     <Compile Include="Pvmrm.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="xQueryDbSNP.cs" />
-    <Compile Include="xUtHardCodedVars.cs" />
-    <Compile Include="UtFasta.cs" />
-    <Compile Include="UtProgram.cs" />
-    <Compile Include="UtProtein.cs" />
-    <Compile Include="xUtQueryDbSNP.cs" />
-    <Compile Include="UtSnp.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="app.config" />

@@ -71,16 +71,13 @@
     <None Include="App.config">
       <SubType>Designer</SubType>
     </None>
-    <None Include="DataFiles\dbSNP01MAF.db">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </None>
-    <None Include="DataFiles\protein.fa">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </None>
-    <None Include="tool-inf\PopulationVariationInput.skyr">
+    <None Include="DataFiles\SNP.db">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
     <None Include="tool-inf\info.properties">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="tool-inf\PeptidePosition.skyr">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
     <None Include="tool-inf\pvmrm.properties">
@@ -112,7 +109,8 @@
     <PreBuildEvent>SubWCRev.exe ..\..\..\ ..\..\Properties\AssemblyInfoTemplate.cs ..\..\Properties\AssemblyInfo.cs</PreBuildEvent>
   </PropertyGroup>
   <PropertyGroup>
-    <PreBuildEvent>SubWCRev.exe ..\..\..\ ..\..\tool-inf\info.properties.Template.cs ..\..\tool-inf\info.properties</PreBuildEvent>
+    <PreBuildEvent>
+    </PreBuildEvent>
   </PropertyGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

@@ -13,7 +13,7 @@ namespace PvmrmExecutor
 		[Option('f', "FastaPath", Required = false, HelpText = "Fasta file path")]
 		public string FastaPath { get; set; }
 
-		[Option('d', "DatabasePath", Required = false, HelpText = "DB Snip Database path")]
+		[Option('d', "DatabasePath", Required = false, HelpText = "dbSNP Database path")]
 		public string DatabasePath { get; set; }
 
 		[Option('o', "OutfilePath", Required = false, HelpText = "Outfile Path")]
