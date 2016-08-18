@@ -13,7 +13,7 @@ namespace PVMRM
 
         public Protein(string protAccession)
         {
-            this.ProteinAccession = protAccession;
+            ProteinAccession = protAccession;
             PeptideList = new List<Peptide>();
             ProteinLevelSnps = new List<Snp>();
         }

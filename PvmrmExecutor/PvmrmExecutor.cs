@@ -76,6 +76,19 @@ namespace PvmrmExecutor
                 if (entry != null)
                 {
                     string[] entrySplit = entry.Split(',');
+                    if (entrySplit.Length > 5)  //occurs when there's a comma in the description
+                    {
+                        //gather up the parts of the description string
+                        string description = "";
+                        for (int i = 2; i < entrySplit.Length - 2; i++)
+                            description += entrySplit[i] + ",";
+                        description = description.Remove(description.Length - 1);
+                        entrySplit = new string[] {entrySplit[0], entrySplit[1], description,
+                            entrySplit[entrySplit.Length - 2], entrySplit[entrySplit.Length -1 ]};
+                    }
+                    //Note: Commas should NEVER occur in other columns, and only very
+                    // rarely within the description
+
                     string[] accessionSplit = entrySplit[proteinIndex].Split('|');
 
                     //First find out what the protein accession is
