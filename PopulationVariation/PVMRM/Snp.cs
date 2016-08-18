@@ -49,7 +49,7 @@ namespace PVMRM
         /// <param name="residue"></param>
         public void SetModifiedPeptideStringAndCodex(string origPeptide, int aa_position, int indexStart, string residue)
         {
-            if (indexStart > -1)
+            if (indexStart > 0)
             {
                 ModifiedPeptideString = (origPeptide.Substring(0, (aa_position - indexStart)) + '(' +
                     residue + ')' + origPeptide.Substring(aa_position + (residue.Length) - indexStart));
