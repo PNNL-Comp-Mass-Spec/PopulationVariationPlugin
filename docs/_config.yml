@@ -1,0 +1,4 @@
+# Jekyll configuration
+name: PopulationVariationPlugin
+description: A Population Variation plug-in for the Skyline software program that can assist researchers in determining whether their target peptides have known mutations in the general human population.
+url: https://pnnl-comp-mass-spec.github.io/PopulationVariationPlugin/
